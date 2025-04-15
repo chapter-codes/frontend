@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Metropolis";
+    font-style: normal;
+    src: url(../font/metropolis/Metropolis-Regular.otf) format("opentype"),
+}
+
+
+
+:root{
+    /* colors */
+    --primary-color:#659F20;
+    --primary-text-color:#1E1E1E;
+    --secondary-text-color:#797979;
+    --btn-border-orange:#E06500;
+    --btn-border-strawberry:#B13038;
+    --btn-border-blueberry:#70549B;
+    --secondary-black:#181818;
+
+    --orange-text: #F49C00;
+    --strawberry-text: #EC253D;
+    --blueberry-text:#7D67CE;
+    --benefits-bg: #00000080;
+    --alt-green-color :#78AB3C;
+    
+    --gradient-orange: #F39E02;
+    
+    /* bg color */
+    --hero-bg:  #FFA500;
+    --contact-us-bg:#FFF6E5;
+
+    /* fonts */
+    --font-primary: "Dela Gothic One", sans-serif;
+    --font-secondary:"Montserrat", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-mulish: "Mulish", sans-serif;
+    --font-metropolis: "Metropolis", sans-serif;
+
+
+    /* dynamic theme color */
+    --dynamic-btn-border-color: var(--btn-border-orange);
+    --dynamic-hero-bg-color: var(--hero-bg);
+}
+
+/* Global styles */
+#order-modal{
+bottom: -100%;
+transition: bottom 0.5s ease-in-out;
+}
+.modal-open #order-modal{
+    bottom:0
+}

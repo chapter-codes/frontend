@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geecore cash-juice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Mulish:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="./app.js" defer></script>
+    <script src="./animateIngredients.js" defer></script>
+    <script src="./tsmSlide.js" defer></script>
+    <script src="./orderJuiceModal.js" defer></script>
+
+</head>
+<body>
+    <section id="header" class="fixed left-0 top-0 flex justify-between items-center w-full px-28 h-20 text-[var(--primary-text-color)] bg-white z-50">
+        <div id='header-brand' class="flex items-center gap-2 ">
+            <div id="brand-logo" class="  p-1 bg-[var(--primary-color)] rounded-lg" >
+                <img src="./assets/images/Logo.svg" alt="logo">
+            </div>
+            <div id="brand-name" class="mr-8" >
+                <h1 class="text-[var(--primary-text-color)] text-base whitespace-nowrap [font-family:var(--font-mulish)]">Wivali AI</h1>
+            </div>
+        </div>
+        <div class="">
+            <ul class="flex items-center gap-6 [font-family:var(--font-inter)]">
+                <li class="">Home</li>
+                <li class="">About</li>
+                <li class="">Contact</li>
+                <li class=" [font-family:var(--font-inter)]"><button class="text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-6 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2">Try it now</button> </li>
+            </ul>
+        </div>
+    </section>
+    <section id="hero" class=" relative h-[100svh]  flex justify-between items-end  pt-24   transition-[background-image] ">
+        <div class="letf-arc absolute top-0 left-0 z-[60]"><img src="./assets/images/header-left-arc.svg" alt="left arc"></div>
+        <div class="flex flex-col gap-10 max-w-[400px] ml-16">  
+            <div class="flex flex-col gap-2 mb-16 ">
+                <div class="min-w-[650px] ">
+                    <!--text that changes in hero section -->
+                    <div class="relative text-6xl  [font-family:var(--font-primary)] whitespace-nowrap">
+                        <div id="text-slides-wrapper" class="relative flex  h-[4.5rem] overflow-hidden">
+                            <div id="text-slides" class="transition-[transform] duration-1000 ">
+                                <p class="h-[4.5rem] max-w-min text-[var(--orange-text)]">Pure, Fresh,</p>
+                                <p class="h-[4.5rem] max-w-min text-[var(--strawberry-text)]">Sweet, Juicy, </p>
+                                <p class="h-[4.5rem] max-w-min text-[var(--blueberry-text)]">Bold, Vibrant, </p> 
+                            </div>
+                            <div class="alte absolute top-0 left-0 flex gap-1 text-6xl [font-family:var(--font-primary)] whitespace-nowrap w-0">
+                                <p class="flex-shrink-0 opacity-0 transition-[width] duration-1000 h-full">Pure, Fresh, </p>
+                                <p> Full</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-6xl [font-family:var(--font-primary)]">of Flavor, Sip the Goodness!</p>
+                </div>
+                <p class=" text-base text-[var(--secondary-text-color)] leading-[1.5] [font-family:var(--font-secondary)] font-normal max-w-[400px]">Nature’s Finest: Orange, Strawberry, and Blueberry Juices Crafted to Refresh, Energize, and Delight.</p>
+            </div>
+            <div class="h-[35svh] relative flex items-center  text-xs text-white font-normal [font-family:var(--font-secondary)] ">   
+                <button id="hero-try-it-btn" class="absolute  left-0 top-0 -translate-y-3/4 text-[var(--dynamic-btn-border-color)] border-2 border-[var(--dynamic-btn-border-color)] bg-white px-6 py-2  rounded-2xl border-b-8 transition-all duration-[1000ms, 300ms] hover:border-2">Try it now</button>
+                <div class="flex flex-col gap-2 justify-center bg-[var(--benefits-bg)] pl-6  py-6 rounded-lg min-w-[400px] shadow-2xl">
+                    <div id="one" class=" flex gap-2 items-center ">
+                        <img src="./assets/images/leaf.png" alt="" class="w-8" >
+                        <p>100% Natural Ingredients</p>
+                    </div>
+                    <div id="two" class=" flex gap-2 items-center ">
+                        <img src="./assets/images/heart.png" alt="" class="w-8" >
+                        <p>No Artificial Additives </p>
+                    </div>
+                    <div id="three" class=" flex gap-2 items-center ">
+                        <img src="./assets/images/orange.png" alt="" class="w-8" >
+                        <p> Rich in Vitamins & Antioxidants </p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='juice-slides-wrapper' class="self-end max-w-[900px] overflow-hidden ">
+            <div id="juice-slides" class="w-full  flex items-end transition-[transform] duration-500 ease-custom">
+                <div class="flex-shrink-0 w-full transition-opacity  ">
+                    <img src="./assets/images/orange-juice.png" alt="">
+                </div>
+                <div class="flex-shrink-0 w-full transition-opacity  ">
+                    <img src="./assets/images/strawberry-juice.png" alt="">
+                </div>
+                <div class="flex-shrink-0 w-full transition-opacity ">
+                    <img src="./assets/images/blueberry-juice.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="hero-transtioned-bg" class="h-[35svh] absolute  w-full -z-10 bottom-0 [font-family:var(--font-secondary)] bg-[var(--dynamic-hero-bg-color)] transtion-[background-color] duration-1000"></div>
+    </section>
+    <section id="Ingredients" class="relative right-0 top-0  flex justify-center  [font-family:var(--font-primary)] text-xl text-[var(--primary-text-color)] "> 
+        <div class="absolute right-0 top-0 w-20">
+            <img src="./assets/images/right-top-leaf.svg" alt="left arc" class="">
+        </div>
+
+
+        <div class=" max-w-[400px] bg-white rounded-br-3xl px-6 my-20 relative z-20">
+            <div class="grid  grid-cols-[4rem_1fr] gap-2">
+                <div class="w-16 h-16 rounded-full p-4  border-black  shadow-inner flex items-center justify-center">
+                    <img src="./assets/images/leaf.png" alt="leaf">
+                </div>
+                <div class="">
+                    <h1 class="">Pure, Natural, and Packed with Real Fruit Goodness</h1>
+                    <p class="[font-family:var(--font-metropolis)] text-base text-[var(--secondary-text-color)] mt-4">Made with real, organic strawberries, free from artificial flavors or preservatives! 🌱🍓</p>
+                </div>
+            </div>
+            <div class="grid  grid-cols-[4rem_1fr] gap-2 pt-10">
+                <div class="w-16 h-16 rounded-full p-4  border-black  shadow-inner flex items-center justify-center">
+                    <img src="./assets/images/smiley-face.png" alt="leaf">
+                </div>
+                <div class="">
+                    <h1 class="">Smooth, Juicy, Refreshing, and Bursting with Delicious Fruity Flavor!</h1>
+                    <p class="[font-family:var(--font-metropolis)] text-base text-[var(--secondary-text-color)] mt-4">Made with real, organic strawberries, free from artificial flavors or preservatives! 🌱🍓</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="transitioned-flex-item" class=" w-0 h-[20rem] transition-[width] duration-500"></div>
+        <div id="scaled-juice-bottle" class="absolute bottom-0 transition-[transform] duration-500">
+            <img src="./assets/images/strawberry-juice-bottle.svg" alt="juice bottle">
+        </div>
+
+        <div class="max-w-[400px] bg-white rounded-bl-3xl px-6 my-20 relative z-20">
+            <div class="grid  grid-cols-[4rem_1fr] gap-2">
+                <div class="w-16 h-16 rounded-full p-4  border-black  shadow-inner flex items-center justify-center">
+                    <img src="./assets/images/elbow.png" alt="leaf">
+                </div>
+                <div class="">
+                    <h1 class="">Loaded with Essential Vitamins and Natural Fruity Nutrients</h1>
+                    <p class="[font-family:var(--font-metropolis)] text-base text-[var(--secondary-text-color)] mt-4">Loaded with vitamins, antioxidants, and energy, keeping you refreshed all day! ⚡🍏</p>
+                </div>
+            </div>
+            <div class="grid  grid-cols-[4rem_1fr] gap-2 pt-10">
+                <div class="w-16 h-16 rounded-full p-4  border-black  shadow-inner flex items-center justify-center ">
+                    <img src="./assets/images/water-drops.png" alt="leaf" class="">
+                </div>
+                <div class="">
+                    <h1 class="">A Refreshing Burst of Flavor in Every Sip</h1>
+                    <p class="[font-family:var(--font-metropolis)] text-base text-[var(--secondary-text-color)] mt-4">Every sip is a sweet & tangy explosion of fresh, sun-ripened strawberries! 🍹☀️</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute left-0 bottom-0 w-20">
+            <img src="./assets/images/left-bottom-leaf.svg" alt="left arc" class="">
+        </div>
+    </section>
+
+    <section id="animated-price-section" class="relative group flex items-center justify-center gap-20 lg:gap-[8rem] mt-20 mb-24 px-8">
+
+        <div class="relative min-w-[20rem]">
+            <div class="relative z-20 w-full">
+                <img src="./assets/images/blueberry-juice-bottle.png" class="w-[20rem]" alt="Blueberry juice">
+            </div>
+            <div class="absolute bottom-0 right-[-10rem] z-10 transition-transform duration-500 origin-right rotate-0 group-hover:rotate-[10deg]">
+                <img src="./assets/images/animated-blueberry-juice-bottle.png" class="w-[20rem]" alt="Blueberry juice">
+            </div>
+        </div>
+
+        <div class=" [font-family:var(--font-primary)] max-w-[37.5rem] flex flex-col gap-6 overflow-hidden">
+            <h1 class="text-5xl text-[var(--alt-green-color)] transition-transform duration-500 translate-x-10 group-hover:translate-x-0">KASH <span class="text-[var(--orange-text)]">ORGANIC JUICE</span></h1>
+            <hr />
+            <h2 class="text-3xl text-[var(--primary-text-color)] transition-transform duration-500 translate-x-1/3 group-hover:translate-x-0">WHERE FRESHNESS <span class="text-[var(--strawberry-text)]">MEETS VALUE</span></h2>
+            <p class="text-sm text-[var(--secondary-text-color)] font-normal [font-family:var(--font-secondary)] pr-4 transition-transform duration-500 translate-x-20 group-hover:translate-x-0">Savor the perfect blend of freshness and value with our all-natural juice! Made from sun-ripened fruits, it’s free of artificial additives and packed with vibrant flavor. Whether you crave tangy oranges, sweet strawberries, or bold blueberries, every sip delivers pure goodness. Loaded with vitamins and antioxidants, it’s your go-to for refreshment and energy. Taste the difference today! 🍊🍓🫐</p>
+            <div id="animated-price" class="flex gap-4 items-center transition-transform duration-500 origin-left rotate-180 group-hover:rotate-0 group-hover:opacity-100">
+                <p class="text-white bg-[var(--primary-text-color)] w-32 px-6 py-3  rounded-xl text-base">Starting at just</p>
+                <p class="text-4xl text-[var(--alt-green-color)]"> $19.9</p>
+            </div>
+        </div>
+        <div class="absolute right-0 bottom-0 translate-y-1/2 w-16">
+            <img src="./assets/images/broad-leaf-right.png" alt="leaf">
+        </div>
+    </section>
+
+    <section id="juices" class="relative overflow-hidden group pb-20">
+        <div class="relative flex items-center justify-center w-full h-full">
+            <div class="relative translate-x-[14rem] z-10">
+                <img src="./assets/images/slide-strawberry-bottle.png" class="max-w-[50rem]" alt="blueberry-juice">
+            </div>
+            <div class="absolute z-20 left-1/2 -translate-x-1/2 flex justify-center itesm-center">
+                <img src="./assets/images/slide-orange-bottle.png" class="max-w-[70rem] -translate-y-[50%] group-hover:translate-y-12 transition-transform duration-1000 ease-custom" alt="orange-juice" >
+            </div>
+            <div class="relative -translate-x-[14rem] z-10">
+                <img src="./assets/images/slide-blueberry-bottle.png" class="max-w-[50rem]" alt="blueberry-juice">
+            </div>
+        </div>
+        <div class="flex justify-center  mt-20">
+            <button id="juices-tryit-btn" class="text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-6 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2">Try it now</button>
+        </div>
+    </section>
+    <div class=""></div>
+
+    <section id="order-modal" class="fixed  z-[70] h-[100svh] w-full bg-[#00000099] py-10 px-16 flex justify-center">
+        
+    <div class=" relative w-4/5 pt-10 pb-4 px-10 rounded-3xl bg-white overflow-y-auto">
+        <div class="flex flex-col gap-4 justify-center">
+            <!-- absolute position -->
+            <div class="absolute left-0 top-0 w-40 h-40" >
+                <img src="./assets/images/modal-left-leaf.png" alt="leaf">
+            </div>
+            <div id="close-modal" class="absolute top-2 right-10 w-6">
+                <button> <img src="./assets//images/cancel.png" alt="cancel"></button>
+            </div>
+            
+            <!-- default positionining -->
+             <div class="flex items-center gap-6 justify-center [font-family:var(--font-secondary) relative z-10" >
+                <div class="w-60 h-40 ">
+                    <img src="./assets/images/modal-orange-bottle.png" alt="orange juice" class='w-full h-full object-cover'>
+                </div>
+                <div class="grow">
+                    <p class="text-base text-[var(--secondary-text-color)] font-normal max-w-[25em]">
+                        Start your day with a burst of sunshine! Our orange juice is made from handpicked, sun-ripened oranges, delivering a tangy, refreshing flavor that’s packed with vitamin C. Perfect for boosting your energy and immunity naturally.
+                    </p>
+                    <p class="text-[var(--alt-green-color)] text-3xl [font-family:var(--font-primary)] mt-4" >$19.9</p>
+                </div>
+                <div class="">
+                    <button id="juices-tryit-btn" class="text-base text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-2 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2 whitespace-nowrap">Order Now</button>
+                </div>
+             </div>
+             <div class="flex items-center gap-6 justify-center [font-family:var(--font-secondary)] relative z-10" >
+                <div class="w-60 h-40 relative z-10">
+                    <img src="./assets/images/strawberry-juice-bottle.png" alt="orange juice" class='w-full h-full object-cover  '>
+                </div>
+                <div class="grow">
+                    <p class="text-base text-[var(--secondary-text-color)] font-normal max-w-[25em] ">
+                        Fuel your body with the bold, vibrant flavor of blueberries. Our blueberry juice is rich in antioxidants and nutrients, offering a deep, refreshing taste that’s as good for you as it is delicious.
+                    </p>
+                    <p class="text-[var(--alt-green-color)] text-3xl [font-family:var(--font-primary)] mt-4" >$19.9</p>
+                </div>
+                <div class="">
+                    <button id="juices-tryit-btn" class="text-sm text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-2 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2 whitespace-nowrap">Order Now</button>
+                </div>
+             </div>
+             <div class="flex items-center gap-6 justify-center [font-family:var(--font-secondary)] relative z-10 " >
+                <div class="w-60 h-40 relative z-10">
+                    <img src="./assets/images/modal-bluberry-bottle.png" alt="orange juice" class='w-full h-full object-cover'>
+                </div>
+                <div class="grow">
+                    <p class="text-sm text-[var(--secondary-text-color)] font-normal max-w-[25em] ">
+                        Indulge in the sweet, juicy goodness of freshly pressed strawberries. Our strawberry juice is a delicious blend of natural sweetness and antioxidants, making it the perfect treat for your taste buds and your health.
+                    </p>
+                    <p class="text-[var(--alt-green-color)] text-3xl [font-family:var(--font-primary)] mt-4" >$19.9</p>
+                </div>
+                <div class="">
+                    <button id="juices-tryit-btn" class="text-sm text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-2 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2 whitespace-nowrap">Order Now</button>
+                </div>
+             </div>
+
+            <!-- absolute position -->
+            <div class="absolute right-0 bottom-0  w-10">
+                <img src="./assets/images/modal-right-leaf.png" alt="leaf">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="testimonial" class="relative flex flex-col items-center w-full justify-center [font-family:var(--font-secondary)] mt-20 pb-20">
+        <div class="absolute left-0 top-0 -translate-y-1/2 w-16">
+            <img src="./assets/images/broad-leaf-left.png" alt="leaf">
+        </div>
+        <h1 class="text-6xl text-[var(--alt-green-color)] [font-family:var(--font-primary)] ">Testimonial</h1>
+        <div id="testimonial-carousel-wrapper" class="relative w-3/5 max-w-[1000px] mt-20 overflow-hidden">
+            <div id="testimonial-carousel" class=" flex " >
+                <div class="flex-shrink-0 flex items-start gap-4 border-b border-[var(--secondary-text-color)] pb-16 w-full h-full px-2">
+                    <div id="person-img" class="w-[40rem] bg-[linear-gradient(150deg,white_0%,white_30%,var(--gradient-orange)_30%,var(--gradient-orange)_40%,white_40%,white_45%,var(--primary-color)_45%,var(--primary-color)_55%,white_55%,white_60%,var(--strawberry-text)_60%,var(--strawberry-text)_70%,white_70%,white_75%,var(--blueberry-text)_75%,var(--blueberry-text)_85%,white_85%)] p-4 rounded-3xl" style="box-shadow: inset 2px 2px 10px 1px grey ;">
+                        <div class="border-10 w-full">
+                            <img src="./assets/images/slide-img-1.png" alt="testimonial image">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex gap-1">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                        </div>
+                        <div class="flex items-end text-base">
+                            <div class=" mt-8">
+                                <p class="text-[var(--secondary-text-color)] pr-10">The strawberry juice is my absolute favorite! It’s sweet, smooth, and tastes like it was just made from freshly picked berries. I love that it’s all-natural with no added sugars. Perfect for my healthy lifestyle!</p>
+                                <p class="text-[var(--primary-text-color)] mt-6">– James L., Health Coach</p>
+                            </div>
+                            <!-- <p class="text-4xl text-[var(--primary-color)] [font-family:var(--font-primary)] ">"</p> -->
+                             <img src="./assets/images/quote-mark.svg" class="w-10" alt="quote-mark" />
+                        </div>    
+                    </div>
+                </div>
+                <div class="flex-shrink-0 flex items-start gap-4 border-b border-[var(--secondary-text-color)] pb-16 w-full h-full px-2">
+                    <div id="person-img" class="w-[40rem] bg-[linear-gradient(150deg,white_0%,white_30%,var(--gradient-orange)_30%,var(--gradient-orange)_40%,white_40%,white_45%,var(--primary-color)_45%,var(--primary-color)_55%,white_55%,white_60%,var(--strawberry-text)_60%,var(--strawberry-text)_70%,white_70%,white_75%,var(--blueberry-text)_75%,var(--blueberry-text)_85%,white_85%)] p-4 rounded-3xl" style="box-shadow: inset 2px 2px 10px 1px grey ;">
+                        <div class="border-10 w-full">
+                            <img src="./assets/images/slide-img-2.png" alt="testimonial image">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex gap-1">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                        </div>
+                        <div class="flex items-end text-base">
+                            <div class=" mt-8">
+                                <p class="text-[var(--secondary-text-color)] pr-10">The strawberry juice is my absolute favorite! It’s sweet, smooth, and tastes like it was just made from freshly picked berries. I love that it’s all-natural with no added sugars. Perfect for my healthy lifestyle!</p>
+                                <p class="text-[var(--primary-text-color)] mt-6">– James L., Health Coach</p>
+                            </div>
+                            <!-- <p class="text-4xl text-[var(--primary-color)] [font-family:var(--font-primary)] ">"</p> -->
+                             <img src="./assets/images/quote-mark.svg" class="w-10" alt="quote-mark" />
+                        </div>    
+                    </div>
+                </div>
+                <div class="flex-shrink-0 flex items-start gap-4 border-b border-[var(--secondary-text-color)] pb-16  w-full h-full px-2">
+                    <div id="person-img" class="w-[40rem] bg-[linear-gradient(150deg,white_0%,white_30%,var(--gradient-orange)_30%,var(--gradient-orange)_40%,white_40%,white_45%,var(--primary-color)_45%,var(--primary-color)_55%,white_55%,white_60%,var(--strawberry-text)_60%,var(--strawberry-text)_70%,white_70%,white_75%,var(--blueberry-text)_75%,var(--blueberry-text)_85%,white_85%)] p-4 rounded-3xl" style="box-shadow: inset 2px 2px 10px 1px grey ;">
+                        <div class="border-10 w-full">
+                            <img src="./assets/images/slide-img-3.png" alt="testimonial image">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex gap-1">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                            <img src="./assets/images/star.svg" alt="star">
+                        </div>
+                        <div class="flex items-end text-base">
+                            <div class=" mt-8">
+                                <p class="text-[var(--secondary-text-color)] pr-10">The strawberry juice is my absolute favorite! It’s sweet, smooth, and tastes like it was just made from freshly picked berries. I love that it’s all-natural with no added sugars. Perfect for my healthy lifestyle!</p>
+                                <p class="text-[var(--primary-text-color)] mt-6">– James L., Health Coach</p>
+                            </div>
+                            <!-- <p class="text-4xl text-[var(--primary-color)] [font-family:var(--font-primary)] ">"</p> -->
+                             <img src="./assets/images/quote-mark.svg" class="w-10" alt="quote-mark" />
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div id="slide-controls" class="controls flex items-center justify-center gap-8 mt-24">
+                <button id="prev" disabled class="opacity-60"><img src="./assets/images/left-arrow.svg" alt="left slide arrow" class="w-10 border border-b-4 active:border-b hover:border-b border-[var(--primary-color)] transition-[border-width] px-2 py-2 rounded-lg "></button>
+                <button id="next" ><img src="./assets/images/right-arrow.svg" alt="right slide arrow" class="w-10 border border-b-4 active:border-b hover:border-b border-[var(--primary-color)] px-2 py-2 rounded-lg"></button>
+            </div>
+        </div>
+    </section>
+    <section id="contact-us" class="bg-[var(--contact-us-bg)] mx-32 px-8 py-8 rounded-3xl [font-family:var(--font-secondary)]">
+        <h1 class="text-3xl text-[var(--orange-text)] [font-family:var(--font-primary)]">Send a Message</h1>
+        <p class="my-4 text-[var(--secondary-text-color)] text-base">Your email address will not be published. Required fields are marked *</p>
+        <form action="/contact-us" class="flex flex-col gap-6" autocomplete='on'>
+            <input type="text" name="name" id="name" placeholder="Name" class="border-2 border-[var(--orange-text)] px-4 py-2 rounded-lg" required>
+            <input type="email" name="email" id="email" placeholder="Email" class="border-2 border-[var(--orange-text)] px-4 py-2 rounded-lg" required>    
+            <textarea name="message" id="message"  class="border-2 border-[var(--orange-text)] px-4 py-2 rounded-lg h-[12rem] resize-none" placeholder="Message" required></textarea>
+            <button type="submit" class="self-end text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-6 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2">Send</button>
+        </form>
+    </section>
+
+    <section class="flex justify-between mt-32 px-32 pb-12 border-b border-[var(--secondary-text-color)] text-[var(--secondary-text-color)] [font-family:var(--font-secondary)]">
+        <div class="">
+            <h1 class="text-xl text-[var(--secondary-black)] [font-family:var(--font-primary)]">CATEGORY</h1>
+            <ul class="flex flex-col gap-2 mt-4">
+                <li class="text-base">Home</li>
+                <li class="text-base">About</li>
+                <li class="text-base">Contact Us</li>
+            </ul>    
+        </div>
+        <div class="w-1/2">
+            <h1 class="text-xl text-[var(--secondary-black)] [font-family:var(--font-primary)]">SUBSCRIBE</h1>
+            <form action="" class="flex gap-6 justify-between mt-4 border rounded-full p-2 pl-4 w-full">
+                <div class="flex gap-1">
+                    <img src="./assets/images/sms.svg" alt="envelope" class="w-8">
+                    <input type="email" name="email" id="email" placeholder="Email" class="text-sm outline-none active:outline-none" required>
+                </div>
+                <button type="submit" class="text-[var(--btn-border-orange)] border-2 border-[var(--btn-border-orange)] px-6 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border-2">Subscribe</button>
+            </form>
+            <p class="mt-4 [font-family:var(--font-secondary) ] text-sm">By subscribing to newsletter you agree with our <a href="/privacy-policy" class="text-[var(--primary-color)] underline">Privacy Policy</a></p>
+        </div>  
+    </section>
+    <section id="footer" class="flex justify-between mt-24 px-40 pb-32">
+        <div class="w-3/5">
+            <div class="flex gap-3">
+                <div id="brand-logo" class="  p-1 bg-[var(--primary-color)] rounded-lg" >
+                    <img src="./assets/images/Logo.svg" alt="logo">
+                </div>
+                <h1 class="text-[var(--primary-text-color)] text-base whitespace-nowrap [font-family:var(--font-mulish)]">Wivali AI</h1>
+            </div>
+            <p class="text-[var(--secondary-text-color)] [font-family:var(--font-secondary)] mt-8 text-sm font-light">Scroll down the page for more recommendations. Below you will find a variety of products from all categories on Steam that may be of interest to you. </p>
+        </div>
+        <div class="self-end flex gap-2 justify-end">
+           <div class="p-3 border-2 border-[var(--primary-color)] rounded-full">
+                <div class="flex justify-center w-8 h-8 p-1 bg-[var(--primary-color)] rounded-full" >
+                    <img src="./assets/images/facebook.png" alt="facebook icon">
+                </div>
+           </div>
+           <div class="p-3 border-2 border-[var(--primary-color)] rounded-full">
+                <div class="flex justify-center w-8 h-8 p-2 bg-[var(--primary-color)] rounded-full" >
+                    <img src="./assets/images/twitter.png" alt="x icon">
+                </div>
+            </div>
+            <div class="p-3 border-2 border-[var(--primary-color)] rounded-full overflow-hidden">
+                <div class="flex justify-center w-8 h-8 rounded-xl bg-[var(--primary-color)]" >
+                    <img src="./assets/images/instagram.png " alt="instagram icon" class="">
+                </div>
+           </div>
+        </div>
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>
