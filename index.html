@@ -17,54 +17,57 @@
 </head>
 <body class="bg-white">
         <!-- Header div -->
-    <section id="header" class="absolute top-6 left-0 z-10 flex justify-center px-2 sm:px-0 w-full" >
-        <div id="header-wrapper" class="grow flex justify-between items-center gap-4 xl:gap-24 px-2 lg:px-12 py-4 md:py-6 mx-2 md:mx-8 lg:mx-24 bg-[var(--bg-header)] rounded-2xl max-w-[1080px]">
-            <div id='header-brand' class="flex gap-2 border-r  items-center">
-                <div id="brand-logo" class=" w-8" >
-                    <img src="./assets/images/Logo.svg" alt="logo">
-                </div>
-                <div id="brand-name" class="mr-8" >
-                    <h1 class="text-white text-sm font-mulish-800 whitespace-nowrap">Wivali AI</h1>
-                </div>
+         <section id="header" class="absolute top-6 left-0 z-10 flex justify-center px-2 sm:px-0 w-full" >
+    <div id="header-wrapper" class="grow flex justify-between items-center gap-4 xl:gap-24 px-2 lg:px-12 py-4 md:py-6 mx-2 md:mx-8 lg:mx-24 bg-[var(--bg-header)] rounded-2xl max-w-[1080px]">
+        <div id='header-brand' class="flex gap-1 border-r  items-center">
+            <div id="brand-logo" class=" w-8" >
+                <!-- <img src="./assets/images/Logo.svg" alt="logo"> -->
+                 <img src="https://api.iconify.design/material-symbols/spa.svg?color=%23ffffff" class="w-8" />
             </div>
-
-            <div id="header-bigscreen-navigation" class="hidden  md:flex md:grow px-4">
-                <ul class= "justify-between flex items-center w-full  text-white text-xs lg:text-sm font-century-gothic">
-                    <li> <a href="#" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Home</a> </li>
-                    <li> <a href="#about-us" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] whitespace-nowrap ">About Us</a> </li>
-                    <li> <a href="#services" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] ">Services</a> </li>
-                    <li> <a href="#contact-us" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] whitespace-nowrap">Contact Us</a> </li>
-                    <li> <a href="#packages" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Packages</a> </li>
-                    <li> <a href="#blog" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Blog</a> </li>
-                </ul>
-            </div>
-        
-            <div id='header-socials' class="flex items-center justify-end space-x-4 text-white min-w-[80px]">
-                <a href="#" class=""  > <img src="./assets/./images/iconoir_youtube.svg" alt="youtube link " /> </a>
-                <a href="#" class="" > <img src="./assets/images/ant-design_instagram-outlined.svg" alt="instagram link" /> </a>
-                <a href="#" class="" > <img src="./assets/images/la_facebook.svg" alt="facebook link" /> </a>
-            </div>
-            <div id="menu-bar" class="relative md:hidden ">
-                <button class="flex flex-col gap-1 px-4 hover">
-                    <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
-                    <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
-                    <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
-                </button>
-                <div id="mobile-navbar" class="absolute h-0 mt-2 top-full right-[25%] overflow-hidden transition-[height] duration-500">
-                    <ul class= "flex flex-col justify-between items-stretch gap-2  text-white text-xs font-century-gothic bg-[var(--bg-header)] px-4 py-2 rounded">
-                        <li> <a href="#" class="hover:text-[var(--primary-color)] ">Home</a> </li>
-                        <li> <a href="#about-us" class="hover:text-[var(--primary-color)] whitespace-nowrap">About Us</a> </li>
-                        <li> <a href="#services" class="hover:text-[var(--primary-color)]">Services</a> </li>
-                        <li> <a href="#contact-us" class="hover:text-[var(--primary-color)] whitespace-nowrap">Contact Us</a> </li>
-                        <li> <a href="#packages" class="hover:text-[var(--primary-color)]">Packages</a> </li>
-                        <li> <a href="#blog" class="hover:text-[var(--primary-color)]">Blog</a> </li>
-                    </ul>
-                </div>
+            <div id="brand-name" class="mr-8" >
+                    <!-- <h1 class="text-white text-lg font-mulish-800 whitespace-nowrap">Wivali AI</h1> -->
+                <h1 class="text-white text-sm font-mulish-800 whitespace-nowrap capitalize">spa</h1>
             </div>
         </div>
-    </section>
 
-    <section id="hero" class="relative w-full h-[85svh] md:h-[100svh] flex justify-center sm:justify-start items-end md:items-center  pb-12 bg-cover bg-center" style="background-image:url('./assets/images/initial-bg.png')">
+        <div id="header-bigscreen-navigation" class="hidden  md:flex md:grow px-4">
+            <ul class= "justify-between flex items-center w-full  text-white text-xs lg:text-sm font-century-gothic">
+                <li> <a href="#" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Home</a> </li>
+                <li> <a href="#about-us" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] whitespace-nowrap ">About Us</a> </li>
+                <li> <a href="#services" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] ">Services</a> </li>
+                <li> <a href="#contact-us" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color] whitespace-nowrap">Contact Us</a> </li>
+                <li> <a href="#packages" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Packages</a> </li>
+                <li> <a href="#blog" class="hover:bg-[var(--primary-color)] p-2 rounded-lg   transition-[background-color]">Blog</a> </li>
+            </ul>
+        </div>
+    
+        <div id='header-socials' class="flex items-center justify-end space-x-4 text-white min-w-[80px]">
+            <a href="#" class=""  > <img src="./assets/./images/iconoir_youtube.svg" alt="youtube link " /> </a>
+            <a href="#" class="" > <img src="./assets/images/ant-design_instagram-outlined.svg" alt="instagram link" /> </a>
+            <a href="#" class="" > <img src="./assets/images/la_facebook.svg" alt="facebook link" /> </a>
+        </div>
+        <div id="menu-bar" class="relative md:hidden ">
+            <button class="flex flex-col gap-1 px-4 hover">
+                <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
+                <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
+                <div class="w-6 h-[.125rem] bg-white rounded-sm hover:bg-[var(--primary-color)] transition-[bacground-color] duration-500 "></div>
+            </button>
+            <div id="mobile-navbar" class="absolute h-0 mt-2 top-full right-[25%] overflow-hidden transition-[height] duration-500">
+                <ul class= "flex flex-col justify-between items-stretch gap-2  text-white text-xs font-century-gothic bg-[var(--bg-header)] px-4 py-2 rounded">
+                    <li> <a href="#" class="hover:text-[var(--primary-color)] ">Home</a> </li>
+                    <li> <a href="#about-us" class="hover:text-[var(--primary-color)] whitespace-nowrap">About Us</a> </li>
+                    <li> <a href="#services" class="hover:text-[var(--primary-color)]">Services</a> </li>
+                    <li> <a href="#contact-us" class="hover:text-[var(--primary-color)] whitespace-nowrap">Contact Us</a> </li>
+                    <li> <a href="#packages" class="hover:text-[var(--primary-color)]">Packages</a> </li>
+                    <li> <a href="#blog" class="hover:text-[var(--primary-color)]">Blog</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+       <section id="hero" class="relative w-full h-[85svh] md:h-[100svh] flex justify-center sm:justify-start items-end md:items-center  pb-12 bg-cover bg-center" style="background-image:url('./assets/images/initial-bg.png')">
         <div id="bg-image" style="background-image: url('./assets/images/hero.png')"  class="absolute inset-0 bg-cover bg-center transition-[opacity] duration-[1500ms] opacity-0"></div>
         <div id="hero-content" class="relative text-white text-left relative   md:mt-6 sm:pl-20 md:pl-52 lg:pl-72 overflow-hidden ">
             <div id="heading-1" class="text-6xl sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-quarts-pachino relative  top-[1.5rem] sm:top-[3rem] md:top-[3.5rem] md:left-[-8rem] lg:left-[-11rem] ">Rejuvenate</div>
@@ -78,7 +81,6 @@
             </a>
         </div>
     </section>
-   
     <section class="py-16 px-4 sm:px-10 md:px-20  grid grid-cols-2 lg:grid-cols-4 gap-y-8 sm:gap-4 md:gap-8 text-center">
         <div class="sm:border-r-2  px-4">
             <img src="./assets/images/Group 1.svg" alt="Tranquil Spaces" class="mx-auto w-12 sm:w-12 md:w-16">
@@ -487,71 +489,75 @@
             </button>
         </form>
     </section>
-
     <section id="footer" class=" text-white text-[0.9rem] bg-[var(--secondary-color)] [font-family:var(--font-tertiary)] w-full pt-12 pb-8 px-16" >
-        <div class="grow flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-8   ">
-            <div id='footer-brand' class="grow">
-                <div class="flex items-center gap-2">
-                    <div id="brand-logo" >
-                        <img src="./assets/images/Logo.svg" alt="logo">
-                    </div>
-                    <div id="brand-name" class="mr-8" >
-                        <h1 class="text-white text-lg font-mulish-800 whitespace-nowrap">Wivali AI</h1>
-                    </div>
-                </div>  
-            </div>
-            <div id="footer-brand-services-and-info " class=" flex justify-evenly md:justify-between gap-8 md:gap-12 md:w-[50vw]">
-                <div id="footer-brand-services" class="whitespace-nowrap">
-                    <h3 class="text-sm text-[var(--footer-heading-color)] pb-12">Services</h3>
-                    <ul class="whitespace-nowrap">
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Message Therapy</li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Facial Treatments</li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Body Treatments</li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Nail Care</li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Hair Removal</li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]">Relaxation Lounge</li>
-                    </ul>
+    <div class="grow flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-8   ">
+        <div id='footer-brand' class="grow">
+            <div class="flex items-center gap-1">
+                <div id="brand-logo" class="w-8">
+                    <!-- <img src="./assets/images/Logo.svg" alt="logo"> -->
+                    <img src="https://api.iconify.design/material-symbols/spa.svg?color=%23ffffff" class="w-8" />
+
                 </div>
-                <div id="footer-brand-info" class="whitespace-nowrap">
-                    <h3 class="text-sm text-[var(--footer-heading-color)] pb-12">Info</h3>
-                    <ul>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#'>Home</a></li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#about-us'>About Us</a></li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#contact-us'>Contact Us</a></li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#packages'>Packages</a></li>
-                        <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#blog'>Blog</a></li>
-                    </ul>
-                 </div>
-                <div>
-                    <button class="flex items-center justify-between bg-[var(--primary-color)] text-white max-w-52 flex-grow-0 h-auto p-1 px-4 rounded-lg hover:bg-[var(--active-primary-color)] transition-['bacground-color'] hidden md:flex">
-                        <div>Consultation</div>
-                        <a href="#" class="w-6"><img src="./assets/images/material-symbols_arrow-back-rounded.svg" alt="link"></a>
-                    </button>
+                <div id="brand-name" class="mr-8" >
+                    <!-- <h1 class="text-white text-lg font-mulish-800 whitespace-nowrap">Wivali AI</h1> -->
+                    <h1 class="text-white text-sm font-mulish-800 whitespace-nowrap capitalize">spa</h1>
+
                 </div>
+            </div>  
+        </div>
+        <div id="footer-brand-services-and-info " class=" flex justify-evenly md:justify-between gap-8 md:gap-12 md:w-[50vw]">
+            <div id="footer-brand-services" class="whitespace-nowrap">
+                <h3 class="text-sm text-[var(--footer-heading-color)] pb-12">Services</h3>
+                <ul class="whitespace-nowrap">
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Message Therapy</li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Facial Treatments</li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Body Treatments</li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Nail Care</li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Hair Removal</li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]">Relaxation Lounge</li>
+                </ul>
             </div>
-            <div class=" md:hidden" >
-                <button class="flex items-center justify-between bg-[var(--primary-color)] text-white max-w-52 flex-grow-0 h-auto p-1 px-4 rounded-lg hover:bg-[var(--active-primary-color)] transition-['bacground-color']">
-                    <p>Consultation</p>
-                    <a href="#"><img src="./assets/images/material-symbols_arrow-back-rounded.svg" alt="link"></a>
+            <div id="footer-brand-info" class="whitespace-nowrap">
+                <h3 class="text-sm text-[var(--footer-heading-color)] pb-12">Info</h3>
+                <ul>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#'>Home</a></li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#about-us'>About Us</a></li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#contact-us'>Contact Us</a></li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#packages'>Packages</a></li>
+                    <li class="hover:text-[var(--primary-color)] transition-[color]"><a href='#blog'>Blog</a></li>
+                </ul>
+             </div>
+            <div>
+                <button class="flex items-center justify-between bg-[var(--primary-color)] text-white max-w-52 flex-grow-0 h-auto p-1 px-4 rounded-lg hover:bg-[var(--active-primary-color)] transition-['bacground-color'] hidden md:flex">
+                    <div>Consultation</div>
+                    <a href="#" class="w-6"><img src="./assets/images/material-symbols_arrow-back-rounded.svg" alt="link"></a>
                 </button>
             </div>
         </div>
-        <div id="contact-us" class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-2 mt-32">
-            <div id="footer-brand-socials" class=" flex gap-4">
-                <a href="#" class="flex items-center justify-center border border-white/20 rounded-full  w-12 h-12 "> <img src="./assets/images/facebook-logo-2.svg" alt="facebook link" /> </a>
-                <a href="#" class="flex items-center justify-center border border-white/20 rounded-full w-12 h-12 "> <img src="./assets/images/ant-design_instagram-outlined.svg" alt="instagram link" > </a>
+        <div class=" md:hidden" >
+            <button class="flex items-center justify-between bg-[var(--primary-color)] text-white max-w-52 flex-grow-0 h-auto p-1 px-4 rounded-lg hover:bg-[var(--active-primary-color)] transition-['bacground-color']">
+                <p>Consultation</p>
+                <a href="#"><img src="./assets/images/material-symbols_arrow-back-rounded.svg" alt="link"></a>
+            </button>
+        </div>
+    </div>
+    <div id="contact-us" class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-2 mt-32">
+        <div id="footer-brand-socials" class=" flex gap-4">
+            <a href="#" class="flex items-center justify-center border border-white/20 rounded-full  w-12 h-12 "> <img src="./assets/images/facebook-logo-2.svg" alt="facebook link" /> </a>
+            <a href="#" class="flex items-center justify-center border border-white/20 rounded-full w-12 h-12 "> <img src="./assets/images/ant-design_instagram-outlined.svg" alt="instagram link" > </a>
+        </div>
+        <div class=" flex flex-col  md:flex-row items-center justify-center md:justify-between  md:items-end md:gap-12 [font-family:var(--font-tertiary)] text-[0.9rem] md:w-[50vw]">
+            <div class="">
+                <div class="hidden md:block w-16 h-[0.1rem] bg-[var(--active-primary-color)] mb-8 "></div>
+                <div class="text-center md:text-left">+1 891 989-11-91</div>
+                <div class="text-center md:text-left">info@logoipsum.com</div>
             </div>
-            <div class=" flex flex-col  md:flex-row items-center justify-center md:justify-between  md:items-end md:gap-12 [font-family:var(--font-tertiary)] text-[0.9rem] md:w-[50vw]">
-                <div class="">
-                    <div class="hidden md:block w-16 h-[0.1rem] bg-[var(--active-primary-color)] mb-8 "></div>
-                    <div class="text-center md:text-left">+1 891 989-11-91</div>
-                    <div class="text-center md:text-left">info@logoipsum.com</div>
-                </div>
-                <div>
-                    <div class="text-[var(--footer-heading-color)]">© 2023 — Copyright</div>
-                </div>
+            <div>
+                <div class="text-[var(--footer-heading-color)]">© 2023 — Copyright</div>
             </div>
-        </div>        
-    </section>
+        </div>
+    </div>        
+</section>
+
 </body>
 </html>
