@@ -1,14 +1,13 @@
 'use strict'
 
-// for translate the juice model for visibility
+// for translating the juice modal for visibility
 
 
 const orderJuiceModal= document.getElementById("order-modal")
-const tryItBtn = document.getElementById("juices-tryit-btn")
+const tryItBtns = document.querySelectorAll(".try-it")
 const closeModal= document.querySelector("#close-modal button")
-console.log(orderJuiceModal, tryItBtn)
 
-tryItBtn.onclick= addClass
+tryItBtns.forEach(btn=> btn.onclick=addClass)
 closeModal.onclick= removeClass
 orderJuiceModal.onclick= (event)=> event.target === orderJuiceModal? removeClass() : null
 

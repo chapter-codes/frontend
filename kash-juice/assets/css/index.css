@@ -23,7 +23,6 @@
     --orange-text: #F49C00;
     --strawberry-text: #EC253D;
     --blueberry-text:#7D67CE;
-    --benefits-bg: #00000080;
     --alt-green-color :#78AB3C;
     
     --gradient-orange: #F39E02;
@@ -31,6 +30,7 @@
     /* bg color */
     --hero-bg:  #FFA500;
     --contact-us-bg:#FFF6E5;
+    --benefits-bg: #00000080;
 
     /* fonts */
     --font-primary: "Dela Gothic One", sans-serif;
@@ -43,13 +43,33 @@
     /* dynamic theme color */
     --dynamic-btn-border-color: var(--btn-border-orange);
     --dynamic-hero-bg-color: var(--hero-bg);
+    
+
+    /* font size */
+    font-size:87.5%;
+
+    scroll-behavior: smooth;
 }
 
 /* Global styles */
 #order-modal{
-bottom: -100%;
-transition: bottom 0.5s ease-in-out;
+    bottom: -100%;
+    transition: bottom 500ms ease-in-out, background-color 150ms ease-in-out 500ms;
 }
 .modal-open #order-modal{
-    bottom:0
+    bottom:0;
+    background-color:#00000099;
 }
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 16px;
+    }
+  }
+
+
+  @layer utilities{
+    .ease-custom{
+        transition-timing-function: cubic-bezier(0, 1.32, 0.22, 0.9);
+    }
+  }

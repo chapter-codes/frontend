@@ -1,18 +1,31 @@
 'use strict'
-
+// slide the testimonial carousel
 
 const tsmCarousel= document.getElementById('testimonial-carousel')
 const tsmTransProp= `transform 2000ms cubic-bezier(0, 1.32, 0.27, 1.19), opacity 1000ms`
+
+//slide button controls
 const btnsArray= Array.from(document.getElementById('slide-controls').children)
 const [prevBtn, nextBtn] =btnsArray
 
-const [modTsmCarousel, tsmCarouselClone, tsmSlidesLength,  tsmTransfromXLen] = ModifyAndCloneCarousel(tsmCarousel, '#testimonial-carousel-wrapper', tsmTransProp)
 
-
-
+//slide carousel automatically
+const [modTsmCarousel, tsmCarouselClone, tsmSlidesLength,  tsmTransfromXLen] = ModifyAndCloneCarousel(
+    tsmCarousel,
+    '#testimonial-carousel-wrapper',
+    tsmTransProp
+)
 const tsmSlideMultiplier=[1]
 let tsmCarouselInterval = setInterval(()=>{
-    handleSlide(modTsmCarousel, tsmCarouselClone, tsmSlidesLength, tsmTransfromXLen, tsmSlideMultiplier, tsmTransProp, {prevBtn, nextBtn} ) 
+    handleSlide(
+        modTsmCarousel, 
+        tsmCarouselClone, 
+        tsmSlidesLength, 
+        tsmTransfromXLen, 
+        tsmSlideMultiplier, 
+        tsmTransProp, 
+        {prevBtn, nextBtn} 
+    ) 
 }, 7000)
 
 //slide with button
@@ -21,8 +34,8 @@ slideButtons.addEventListener('click', (event)=>{
     slideWithButton(event, tsmCarouselInterval, modTsmCarousel, tsmCarouselClone, tsmTransfromXLen, tsmSlideMultiplier, tsmSlidesLength, tsmTransProp) 
 })  
 
-function ModifyAndCloneCarousel (carouselElement, cloneParentId='#services-carousel-wrapper', transProp='') {
-    const cloneParent= document.querySelector(`${cloneParentId}`)
+function ModifyAndCloneCarousel (carouselElement, cloneParentId='', transProp='') {
+    const cloneParent= document.querySelector(cloneParentId)
     const carouselArray = Array.from(carouselElement.children)
 
     carouselElement.style.zIndex = '20'
@@ -31,14 +44,14 @@ function ModifyAndCloneCarousel (carouselElement, cloneParentId='#services-carou
     //clone carouselElement to be used when fading out of last slide and fading in of first slide
     const clonedCarousel = carouselElement.cloneNode(true);
     clonedCarousel.id= 'cloned-' + carouselElement.id
-    console.log( carouselElement.id, carouselElement.scrollHeight, cloneParent.offsetHeight)    
-    clonedCarousel.style.height = carouselElement.firstElementChild.scrollHeight+'px'
-    clonedCarousel.style.width = carouselElement.firstElementChild.offsetWidth+'px'
+    clonedCarousel.style.height = document.getElementById('testimonial-carousel').offsetHeight+'px'
+    clonedCarousel.style.width = carouselElement.offsetWidth+'px'
     clonedCarousel.style.transition = transProp
     clonedCarousel.style.position = 'absolute'
     clonedCarousel.style.zIndex = '10'
     clonedCarousel.style.top = '0'
     clonedCarousel.style.left = '0'
+    clonedCarousel.children[0].style.borderWidth = 0;
 
     //keep cloned carousel fadded out
     clonedCarousel.style.opacity = 0
@@ -49,6 +62,7 @@ function ModifyAndCloneCarousel (carouselElement, cloneParentId='#services-carou
 }
 
 function handleSlide(carouselElement, carouselClone, slidesLength, transformxLen, multiplier, transProp="", hasBtnControl=false){
+
     //if last carousel item is reached, fade out and reset carousel
     if(multiplier[0] ==slidesLength) {
         setTimeout(()=>{
