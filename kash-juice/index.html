@@ -15,6 +15,7 @@
     <script src="./animateAbout.js" defer></script>
     <script src="./tsmSlide.js" defer></script>
     <script src="./orderJuiceModal.js" defer></script>
+    <script src="./mobileNavigation.js" defer></script>
     <style>
         @font-face {
             font-family: "Metropolis";
@@ -106,20 +107,21 @@
             </ul>
             
             <div class="sm:hidden flex items-center">
-                <button class="relative flex flex-col gap-1 px-4 group ">
+                <button class="try-it   text-sm text-[var(--btn-border-orange)] border border-[var(--btn-border-orange)] px-3 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border whitespace-nowrap">Try it now</button> 
+                <button id='mobile-nav-btn' class="relative flex flex-col gap-1 px-4">
                     <div class="w-6 h-[.125rem] bg-[var(--primary-color)] rounded-sm group-:bg-[var(--primary-color)] transition-[background-color] duration-500 "></div>
                     <div class="w-6 h-[.125rem] bg-[var(--primary-color)] rounded-sm hover:bg-[var(--primary-color)] transition-[background-color] duration-500 "></div>
                     <div class="w-6 h-[.125rem] bg-[var(--primary-color)] rounded-sm hover:bg-[var(--primary-color)] transition-[background-color] duration-500 "></div>
                     
                     
-                    <div id="mobile-navbar" class="absolute  h-0 group-focus:h-[6rem] mt-2 top-full right-[25%] overflow-hidden transition-[height] duration-500 border-[var(--primary-color)] bg-[var(--primary-color)]  rounded text-var(--)">
+                    <div id="mobile-navbar" class="absolute  h-0 group-focus:h-[6rem] mt-4 top-full right-[25%] overflow-hidden transition-[height] duration-500 border-[var(--primary-color)] bg-[var(--primary-color)]  rounded text-var(--)">
                         <ul class= "flex flex-col justify-between items-stretch gap-2  text-white text-sm font-century-gothic bg-[var(--bg-header)] px-4 py-2 rounded">
                             <li class="w-full hover:text-[var(--primary-color)] hover:bg-white rouded-sm transition-[color, background-color] "> <a href="#" class="h-full">Home</a> </li>
                             <li class="w-full hover:text-[var(--primary-color)] hover:bg-white rounded-sm transition-[color, background-color] "> <a href="#about" class="whitespace-nowrap">About Us</a> </li>
                             <li class="w-full hover:text-[var(--primary-color)] hover:bg-white rounded-sm transition-[color, background-color] "> <a href="#contact-us" class="whitespace-nowrap p-1 ">Contact Us</a> </li>
                         </ul>
                     </div>
-                    <button class="try-it   text-sm text-[var(--btn-border-orange)] border border-[var(--btn-border-orange)] px-3 py-1  rounded-2xl border-b-8 transition-[border-width] hover:border">Try it now</button> 
+                    
                 </button>
             </div>
         </div>
