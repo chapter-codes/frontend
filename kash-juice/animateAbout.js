@@ -16,6 +16,7 @@ window.onscroll = handleScroll
 
 function handleScroll(){
     for(let i=0; i<5; i++){
+        console.log(i, animatedTexts[i])
         handleAnimation(animatedTexts[i], i, window.innerWidth)
     }
     
@@ -28,20 +29,26 @@ function handleAnimation (element, id, screenWidth){
     const rect = element.getBoundingClientRect()
     const headerHeight= document.getElementById('header').offsetHeight
     const animatedTextPropArr=[
+        'translate-x-10',
         'translateX(0)',
-        'translateX(0)',
-        'translateX(0)',
-        'translateX(0)',
-        'rotate(0deg)',
+        'translate-x-1/3',
+        'translate-x-20',
+        'rotate-180',
         'rotate(10deg)',
-        'translateY(1.5rem)'
+        ['-translate-y-1/2', 'translate-y-10']
     ]
 
     if(screenWidth <= '1024'){ //smaller than desktop view
         if(rect.top >= headerHeight && rect.bottom <= window.innerHeight  ){
-            id == 1 ? null : element.style.transform= animatedTextPropArr[id]
+            console.log('animate', id)
+            console.log('ele', element)
+            id == 1 ? null : element.classList.remove(animatedTextPropArr[id])
+            id == 5 ? element.style.transform = animatedTextPropArr[id] : null
+            id == 6 ? element.classList.replace(animatedTextPropArr[id][0], animatedTextPropArr[id][1]) : null
         }else{
-            id == 1 ? null : element.style.transform = ''
+            id == 1 ? null : element.classList.add(animatedTextPropArr[id])
+            id == 5 ? element.style.transform= '' : null
+            id == 6 ? element.classList.replace(animatedTextPropArr[id][1], animatedTextPropArr[id][0]) : null
         }
     }
 }

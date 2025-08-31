@@ -88,7 +88,7 @@
 
 </head>
 <body>
-    <section id="header" class="fixed left-0 top-0 flex justify-between items-center w-full pl-12 pr-6 lg:px-28 h-16 md:h-20 text-[var(--primary-text-color)] bg-white z-50">
+    <section id="header" class="fixed left-0 top-0 flex justify-between items-center w-full pl-12 pr-6  lg:px-28 h-16 md:h-20 text-[var(--primary-text-color)] bg-white z-50">
         <div id='header-brand' class="flex items-center gap-2 ">
             <div id="brand-logo" class="  p-1 bg-[var(--primary-color)] rounded-lg w-8 sm:w-auto" >
                 <!-- <img src="./assets/images/Logo.svg" alt="logo"> -->
@@ -129,7 +129,7 @@
     <section>
         <div class="letf-arc absolute top-0 left-0 z-[60] w-10 lg:w-auto"><img src="./assets/images/header-left-arc.svg" alt="left arc"></div>
 
-            <div id="animated-text-section" class="flex flex-col justify-center text-3xl lg:text-6xl [font-family:var(--font-primary)] h-[65svh] pt-20 lg:pt-24 pl-4 pr-4 pb-10 md:pl-6 lg:pl-16">
+            <div id="animated-text-section" class="flex flex-col justify-center text-3xl lg:text-6xl [font-family:var(--font-primary)] md:h-[65svh] pt-20 lg:pt-24 px-6 sm:px-10 pb-20 md:pb-10 md:pl-6 lg:pl-16 ">
                             <div id="text-slides-wrapper" class=" relative text-3xl md:text-4xl lg:text-6xl  [font-family:var(--font-primary)] flex h-[2.8rem] lg:h-[4.5rem] overflow-hidden whitespace-nowrap">
                                 <div id="text-slides" class="transition-[transform] duration-1000 ">
                                     <p class=" h-[2.8rem] lg:h-[4.5rem] max-w-min text-[var(--orange-text)]">Pure, Fresh,</p>
@@ -145,12 +145,12 @@
                     <p class=" text-base text-[var(--secondary-text-color)] leading-[1.5] [font-family:var(--font-secondary)] font-normal max-w-[350px] md:max-w-[500px] mt-2 ">Nature’s Finest: Orange, Strawberry, and Blueberry Juices Crafted to Refresh, Energize, and Delight.</p>
             </div>
             
-            <div class="relative flex flex-col-reverse items-center md:items-stretch md:flex-row justify-between h-[70svh] md:h-[35svh] bg-[var(--dynamic-hero-bg-color)] md:pl-6 lg:pl-16 transition-[background-color] duration-500 ">
-                <div class="relative top-[-18%] md:top-0 self-center flex flex-col gap-2 justify-center [font-family:var(--font-secondary)] text-sm lg:text-base text-white font-normal bg-[var(--benefits-bg)] px-6  py-6 rounded-lg min-w-[60%] md:min-w-[300px] lg:min-w-[400px] shadow-inner shadow-[#00000040] ">
+            <div class="relative flex flex-col-reverse items-center md:items-stretch md:flex-row justify-between md:h-[35svh] bg-[var(--dynamic-hero-bg-color)] md:pl-6 lg:pl-16 py-20 md:py-0 transition-[background-color] duration-500 ">
+                <div class="relative z-20 md:relative bottom- md:top-0 self-center flex flex-col gap-2 justify-center [font-family:var(--font-secondary)] text-sm lg:text-base text-white font-normal bg-[var(--benefits-bg)] px-6  py-6 rounded-lg  min-w-[60%] md:min-w-[300px] lg:min-w-[400px] shadow-inner shadow-[#00000040] mt-[] md:mt-0">
                     <div id="one" class=" flex gap-2 items-center ">
                         <div class="bg-white w-8 h-8 rounded-full p-2 ">
-                        <img src="./assets/images/leaf.png" alt="" class="w-8" >
-
+                            <img src="./assets/images/leaf.png" alt="" class="w-8" >
+                            
                         </div>
                         <p class="whitespace-nowrap">100% Natural Ingredients</p>
                     </div>
@@ -164,9 +164,9 @@
                     </div>
                 </div>
 
-                <button id="hero-try-it-btn" class="try-it relative md:absolute font-medium text-sm md:text-base text-[var(--dynamic-btn-border-color)] border-2 border-[var(--dynamic-btn-border-color)] bg-white px-3  md:px-6 py-1 md:py-1  rounded-2xl border-b-8 transition-all duration-[1000ms, 300ms] hover:border-2 top-[-20%] md:top-0 md:-translate-y-[60%]">Try it now</button>
+                <button id="hero-try-it-btn" class="try-it absolute font-medium text-sm md:text-base text-[var(--dynamic-btn-border-color)] border-2 border-[var(--dynamic-btn-border-color)] bg-white px-3  md:px-6 py-1 md:py-1  rounded-2xl border-b-8 transition-all duration-[1000ms, 300ms] hover:border-2 top-0 left-6 sm:left-10 md:left-auto -translate-y-[60%]">Try it now</button>
 
-                <div id='juice-slides-wrapper' class="relative -translate-x-8 md:translate-x-0 -translate-y-1/2 md:translate-y-0 self-center md:self-end overflow-hidden w-[65svw] lg:w-[55svw]">
+                <div id='juice-slides-wrapper' class="absolute md:relative -top-4 md:top-auto right-4 md:right-auto -translate-x-8 md:translate-x-0 -translate-y-1/2 md:translate-y-0 self-center md:self-end overflow-hidden w-[65svw] lg:w-[55svw]">
                     <div id="juice-slides" class="flex transition-transform duration-500" >
                         <div class="flex-shrink-0 max-w-full ">
                             <img src="./assets/images/orange-juice.png" alt="orange-juice">
@@ -271,7 +271,7 @@
                 <img src="./assets/images/slide-strawberry-bottle.png" class=" max-w-[20rem] md:max-w-[30rem] lg:max-w-[50rem]" alt="blueberry-juice">
             </div>
             <div class="absolute z-20 left-1/2 -translate-x-1/2 flex justify-center items-center">
-                <img src="./assets/images/slide-orange-bottle.png" class="max-w-[28rem] md:max-w-[45rem] lg:max-w-[70rem] -translate-y-[50%] group-hover:translate-y-12 transition-transform duration-[2000ms] ease-custom" alt="orange-juice" >
+                <img src="./assets/images/slide-orange-bottle.png" class="max-w-[28rem] md:max-w-[45rem] lg:max-w-[70rem] -translate-y-1/2 group-hover:translate-y-12 transition-transform duration-[2000ms] ease-custom" alt="orange-juice" >
             </div>
             <div class="relative translate-x-[-5.6rem]  lg:-translate-x-[14rem] z-10">
                 <img src="./assets/images/slide-blueberry-bottle.png" class="max-w-[20rem] md:max-w-[30rem] lg:max-w-[50rem]" alt="blueberry-juice">
